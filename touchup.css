@@ -1,0 +1,32 @@
+/* touchup.css - Final Version */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #4A90E2; --primary-dark: #357ABD; --secondary-color: #50E3C2; --dark-bg: #2C3E50; --light-bg: #F4F7F6; --text-color: #333; --text-light: #ecf0f1; --border-color: #e0e0e0; --danger-color: #e74c3c; --danger-dark: #c0392b; --shadow: 0 10px 30px rgba(0, 0, 0, 0.07); --border-radius: 8px;
+}
+body { margin: 0; font-family: 'Poppins', sans-serif; background-color: var(--light-bg); color: var(--text-color); min-height: 100vh; display: flex; flex-direction: column; }
+header { background-image: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); color: white; padding: 20px 30px; text-align: center; font-size: 24px; font-weight: 600; }
+.main-container { display: grid; grid-template-columns: 260px 1fr; gap: 30px; padding: 30px; flex-grow: 1; }
+.sidebar { background: var(--dark-bg); color: var(--text-light); padding: 20px; border-radius: var(--border-radius); box-shadow: var(--shadow); }
+.sidebar ul { list-style: none; padding: 0; margin: 0; }
+.sidebar ul li { margin: 10px 0; }
+.sidebar ul li a, .sidebar ul li button { color: var(--text-light); text-decoration: none; font-size: 16px; font-weight: 500; display: flex; align-items: center; gap: 15px; padding: 12px 15px; border-radius: var(--border-radius); transition: all 0.3s ease; background: transparent; border: none; cursor: pointer; width: 100%; text-align: left; }
+.sidebar ul li a:hover, .sidebar ul li button:hover, .sidebar ul li a.active { background: rgba(255, 255, 255, 0.1); color: white; }
+.content { background: #fff; padding: 30px; border-radius: var(--border-radius); box-shadow: var(--shadow); }
+.content h2 { color: var(--text-color); margin-top: 0; margin-bottom: 25px; font-weight: 600; }
+.table-container { overflow-x: auto; }
+.sales-table { width: 100%; border-collapse: collapse; margin-top: 25px; font-size: 15px; }
+.sales-table th, .sales-table td { text-align: left; padding: 15px; border-bottom: 1px solid var(--border-color); }
+.sales-table th { background: var(--light-bg); color: var(--text-color); font-weight: 600; text-transform: uppercase; font-size: 12px; }
+.delete-btn { background: var(--danger-color); color: white; border: none; border-radius: 50%; width: 24px; height: 24px; line-height: 24px; text-align: center; cursor: pointer; transition: background 0.3s ease; }
+.delete-btn:hover { background: var(--danger-dark); }
+.modal { position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.6); backdrop-filter: blur(5px); display: none; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease-in-out; }
+.modal.show { display: flex; opacity: 1; }
+.modal-content { background: #fff; padding: 0; border-radius: var(--border-radius); width: 90%; max-width: 450px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); max-height: 90vh; display: flex; flex-direction: column; }
+.modal-header { display: flex; justify-content: space-between; align-items: center; padding: 20px 30px; border-bottom: 1px solid var(--border-color); flex-shrink: 0; }
+.close-modal { font-size: 24px; font-weight: 300; color: #999; background: none; border: none; cursor: pointer; }
+#entryForm { display: flex; flex-direction: column; gap: 15px; padding: 20px 30px; overflow-y: auto; }
+.footer { text-align: center; padding: 20px; background: var(--dark-bg); color: var(--text-light); }
+.analytics-section { margin-bottom: 40px; }
+.chart-container { background: #fff; padding: 20px; border-radius: var(--border-radius); box-shadow: var(--shadow); }
+@media (max-width: 768px) { .main-container { grid-template-columns: 1fr; } }

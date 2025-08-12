@@ -1,0 +1,57 @@
+/* login-style.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #4A90E2;
+    --primary-dark: #357ABD;
+    --dark-bg: #2C3E50;
+    --text-color: #333;
+    --border-color: #ccc;
+    --border-radius: 8px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(135deg, var(--dark-bg) 0%, var(--primary-color) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--text-color);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+.form-container h1 {
+    margin-bottom: 10px;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--dark-bg);
+}
+
+.form-container p {
+    margin-bottom: 30px;
+    font-size: 16px;
+    color: #666;
+}
+
+form { text-align: left; }
+form label { display: block; margin-bottom: 5px; font-weight: 500; font-size: 14px; color: #555; }
+form input { width: 100%; padding: 12px 15px; margin-bottom: 20px; border: 1px solid var(--border-color); border-radius: var(--border-radius); font-size: 16px; font-family: 'Poppins', sans-serif; box-sizing: border-box; }
+form button { width: 100%; padding: 14px 15px; background: var(--primary-color); border: none; border-radius: var(--border-radius); font-size: 18px; font-weight: 500; color: white; cursor: pointer; transition: background-color 0.3s ease; }
+form button:hover { background-color: var(--primary-dark); }
+.links-container { margin-top: 25px; font-size: 14px; }
+.links-container a { color: var(--primary-color); text-decoration: none; font-weight: 500; }
+.links-container a:hover { text-decoration: underline; }
+.message { font-size: 14px; font-weight: 500; text-align: center; padding: 10px; margin-bottom: 15px; border-radius: var(--border-radius); display: none; }
+.message.success { background-color: #d4edda; color: #155724; }
+.message.error { background-color: #f8d7da; color: #721c24; }
